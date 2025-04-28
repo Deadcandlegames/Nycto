@@ -13,9 +13,7 @@ Explore, fight monsters, and uncover secrets!
 - Explore the world, find keys, defeat bosses, and restore the light!
 
 ## How to Install
-1. Clone the repo: https://github.com/Deadcandlegames/Nycto.git
-2. Open the folder.
-3. Run `index.html` in your browser.
+___
 
 ## Current Status
 Very, very early in development.
