@@ -13,7 +13,7 @@ Explore, fight monsters, and uncover secrets!
 - Explore the world, find keys, defeat bosses, and restore the light!
 
 ## How to Install
-___
+Go to *https://deadcandlegames.github.io/Nycto/* to see the live README file.
 
 ## Current Status
 Very, very early in development.
