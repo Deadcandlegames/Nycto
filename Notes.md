@@ -1,6 +1,6 @@
-#Notes
+# Notes
 
-##*gamedata* specifications
+## *gamedata* specifications
 
 when adding *gamedata* functions make sure you spesify how many buttons there are by adding
 *this.buttoncount = 1;*
