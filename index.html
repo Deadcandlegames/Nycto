@@ -35,202 +35,468 @@
   </article>
 
   <script>
-    document.getElementById("play").addEventListener("click", start);
-    let password = "pass@word1";
-    let text = "null";
-    let buttontext1 = "null";
-    let buttontext2 = "null";
+document.getElementById("play").addEventListener("click", start);
+let password = "pass@word1";
+let text = "null";
+let buttontext1 = "null";
+let buttontext2 = "null";
+let buttontext3 = "null";
+let buttontext4 = "null";
+let buttontext5 = "null";
+let buttontext6 = "null";
 
-    function start() {
-      let passwordinput = prompt("what is the password");
-      document.getElementById("play").remove();
-      if (passwordinput != password) {
-        alert("Wrong Password!");
-      } else {
-        play();
-      }
-    }
+function start() {
+  let passwordinput = prompt("what is the password");
+  document.getElementById("play").remove();
+  if (passwordinput != password) {
+    alert("Wrong Password!");
+  } else {
+    play();
+  }
+}
 
-    function play() {
-      alert("You are playing!");
-      const gamedata = {
-        refresh() {
-          document.getElementById("gamearea").innerText = `${text}.`;
-          let oldbuttons = document.querySelectorAll(".option-button");
-          let i = oldbuttons.length - 1;
-          while (i >= 0) {
-            oldbuttons[i].remove();
-            i -= 1;
-          }
-      const button1 = document.createElement("button");
-      if (button1) {
-        button1.style.textAlign = "center";
+function play() {
+  alert("You are playing!");
+  const gamedata = {
+    buttoncount: 2,
+    refresh() {
+      document.getElementById("gamearea").innerText = `${text}.`;
+      let oldbuttons = document.querySelectorAll(".option-button");
+      let i = oldbuttons.length - 1;
+      while (i >= 0) {
+        oldbuttons[i].remove();
+        i -= 1;
       }
-      button1.id = "option1";
-      button1.className = "option-button";
-      button1.innerText = buttontext1;
-      buttons.appendChild(button1);
       //
-      const button2 = document.createElement("button");
-      if (button2) {
-        button2.style.textAlign = "center";
+      switch (this.buttoncount) {
+        case 1:
+          let button1 = document.createElement("button");
+          if (button1) {
+            button1.style.textAlign = "center";
+          }
+          button1.id = "option1";
+          button1.className = "option-button";
+          button1.innerText = buttontext1;
+          let buttons = document.getElementById("buttons");
+          buttons.appendChild(button1);
+          //
+          break;
+        case 2:
+          let button1 = document.createElement("button");
+          if (button1) {
+            button1.style.textAlign = "center";
+          }
+          button1.id = "option1";
+          button1.className = "option-button";
+          button1.innerText = buttontext1;
+          let buttons = document.getElementById("buttons");
+          buttons.appendChild(button1);
+          //
+
+          let button2 = document.createElement("button");
+          if (button2) {
+            button2.style.textAlign = "center";
+          }
+          button2.id = "option2";
+          button2.className = "option-button";
+          button2.innerText = buttontext2;
+          buttons.appendChild(button2);
+          //
+          break;
+        case 3:
+          let button1 = document.createElement("button");
+          if (button1) {
+            button1.style.textAlign = "center";
+          }
+          button1.id = "option1";
+          button1.className = "option-button";
+          button1.innerText = buttontext1;
+          let buttons = document.getElementById("buttons");
+          buttons.appendChild(button1);
+          //
+
+          let button2 = document.createElement("button");
+          if (button2) {
+            button2.style.textAlign = "center";
+          }
+          button2.id = "option2";
+          button2.className = "option-button";
+          button2.innerText = buttontext2;
+          buttons.appendChild(button2);
+          //
+
+          let button3 = document.createElement("button");
+          if (button3) {
+            button3.style.textAlign = "center";
+          }
+          button3.id = "option3";
+          button3.className = "option-button";
+          button3.innerText = buttontext3;
+          buttons.appendChild(button3);
+          //
+          break;
+        case 4:
+          let button1 = document.createElement("button");
+          if (button1) {
+            button1.style.textAlign = "center";
+          }
+          button1.id = "option1";
+          button1.className = "option-button";
+          button1.innerText = buttontext1;
+          let buttons = document.getElementById("buttons");
+          buttons.appendChild(button1);
+          //
+
+          let button2 = document.createElement("button");
+          if (button2) {
+            button2.style.textAlign = "center";
+          }
+          button2.id = "option2";
+          button2.className = "option-button";
+          button2.innerText = buttontext2;
+          buttons.appendChild(button2);
+          //
+
+          let button3 = document.createElement("button");
+          if (button3) {
+            button3.style.textAlign = "center";
+          }
+          button3.id = "option3";
+          button3.className = "option-button";
+          button3.innerText = buttontext3;
+          buttons.appendChild(button3);
+          //
+
+          let button4 = document.createElement("button");
+          if (button4) {
+            button4.style.textAlign = "center";
+          }
+          button4.id = "option4";
+          button4.className = "option-button";
+          button4.innerText = buttontext4;
+          buttons.appendChild(button4);
+          //
+          break;
+        case 5:
+          let button1 = document.createElement("button");
+          if (button1) {
+            button1.style.textAlign = "center";
+          }
+          button1.id = "option1";
+          button1.className = "option-button";
+          button1.innerText = buttontext1;
+          let buttons = document.getElementById("buttons");
+          buttons.appendChild(button1);
+          //
+
+          let button2 = document.createElement("button");
+          if (button2) {
+            button2.style.textAlign = "center";
+          }
+          button2.id = "option2";
+          button2.className = "option-button";
+          button2.innerText = buttontext2;
+          buttons.appendChild(button2);
+          //
+
+          let button3 = document.createElement("button");
+          if (button3) {
+            button3.style.textAlign = "center";
+          }
+          button3.id = "option3";
+          button3.className = "option-button";
+          button3.innerText = buttontext3;
+          buttons.appendChild(button3);
+          //
+
+          let button4 = document.createElement("button");
+          if (button4) {
+            button4.style.textAlign = "center";
+          }
+          button4.id = "option4";
+          button4.className = "option-button";
+          button4.innerText = buttontext4;
+          buttons.appendChild(button4);
+          //
+
+          let button5 = document.createElement("button");
+          if (button5) {
+            button5.style.textAlign = "center";
+          }
+          button5.id = "option5";
+          button5.className = "option-button";
+          button5.innerText = buttontext5;
+          buttons.appendChild(button5);
+          //
+          break;
+        case 6:
+          let button1 = document.createElement("button");
+          if (button1) {
+            button1.style.textAlign = "center";
+          }
+          button1.id = "option1";
+          button1.className = "option-button";
+          button1.innerText = buttontext1;
+          let buttons = document.getElementById("buttons");
+          buttons.appendChild(button1);
+          //
+
+          let button2 = document.createElement("button");
+          if (button2) {
+            button2.style.textAlign = "center";
+          }
+          button2.id = "option2";
+          button2.className = "option-button";
+          button2.innerText = buttontext2;
+          buttons.appendChild(button2);
+          //
+
+          let button3 = document.createElement("button");
+          if (button3) {
+            button3.style.textAlign = "center";
+          }
+          button3.id = "option3";
+          button3.className = "option-button";
+          button3.innerText = buttontext3;
+          buttons.appendChild(button3);
+          //
+
+          let button4 = document.createElement("button");
+          if (button4) {
+            button4.style.textAlign = "center";
+          }
+          button4.id = "option4";
+          button4.className = "option-button";
+          button4.innerText = buttontext4;
+          buttons.appendChild(button4);
+          //
+
+          let button5 = document.createElement("button");
+          if (button5) {
+            button5.style.textAlign = "center";
+          }
+          button5.id = "option5";
+          button5.className = "option-button";
+          button5.innerText = buttontext5;
+          buttons.appendChild(button5);
+          //
+
+          let button6 = document.createElement("button");
+          if (button6) {
+            button6.style.textAlign = "center";
+          }
+          button6.id = "option6";
+          button6.className = "option-button";
+          button6.innerText = buttontext6;
+          buttons.appendChild(button6);
+          //
+          break;
       }
-      button2.id = "option2";
-      button2.className = "option-button";
-      button2.innerText = buttontext2;
-      buttons.appendChild(button2);
-        },
-        beginning() {
-          text = "You wake up in a strangely decorated house";
-          buttontext1 = "go outside.";
-          buttontext2 = "why am I here?";
-          gamedata.refresh();
-          document.getElementById("option1").addEventListener("click", gamedata.a8);
-          document.getElementById("option2").addEventListener("click", gamedata.a52);
-        },
-        a8() {
-          text = "As you exit the house you notice that you're in a village, one filled with generosity and light. To your right the road turns north-bound. To your left the road continues westward.";
-          buttontext1 = "Head Left";
-          buttontext2 = "Head Right";
-          gamedata.refresh();
-          document.getElementById("option1").addEventListener("click", gamedata.a82);
-          document.getElementById("option2").addEventListener("click", gamedata.a7);
-        },
-        a52() {
-          text = "You think long and hard about why you're here and you can't seem to find an answer. The last thing you remember was that you blacked out in the woods.";
-          buttontext1 = "go outside";
-          buttontext2 = "wait a bit";
-          gamedata.refresh();
-          document.getElementById("option1").addEventListener("click", gamedata.a8);
-          document.getElementById("option2").addEventListener("click", gamedata.a53);
-        },
-        a53() {
-          text = `You wait in this house for a while until an old lady enters. She then says "Ah good, you're awake. I am Elder Vasra. I was just coming to check on you; our scouts found you in the forest all blacked out. You were just about to be consumed by the darkness! When you're feeling better come talk to me. To get to my house, first go right, then left. Got it?"`;
-          buttontext1 = "Got it";
-          buttontext2 = "The Darkness?";
-          this.metElderVasra = "true";
-          gamedata.refresh();
-          document.getElementById("option1").addEventListener("click", gamedata.a55);
-          document.getElementById("option2").addEventListener("click", gamedata.a54);
-        },
-        a54() {
-          text = `"The darkness?" you ask. "The darkness, you've never heard of it? It's been consuming our land for over 2 weeks now! I can't believe you've never heard of it!" Elder Vasra replies, then as quickly as she came, she's gone.`;
-          buttontext1 = "Go outside";
-          buttontext2 = "Try to follow her";
-          gamedata.refresh();
-          document.getElementById("option1").addEventListener("click", gamedata.a8);
-          document.getElementById("option2").addEventListener("click", gamedata.a8);
-        },
-        a55() {
-          text = `"Got it!" you reply. The Elder nods then exits quickly out the front door.`;
-          buttontext1 = "Go outside";
-          buttontext2 = "Try to follow her";
-          gamedata.refresh();
-          document.getElementById("option1").addEventListener("click", gamedata.a8);
-          document.getElementById("option2").addEventListener("click", gamedata.a8);
-        },
-        a7() {
-          if (this.metElderVasra != "true") {
-            text = "The road continues to the west with houses lining the sides. Nearing the end you see a great big house.";
-          } else {
-            text = "The road continues to the west with houses lining the sides. Nearing the end you see the house Elder Vasra was talking about.";
-          }
-          buttontext1 = "Enter House";
-          buttontext2 = "Go Back";
-          gamedata.refresh();
-          document.getElementById("option1").addEventListener("click", gamedata.a3);
-          document.getElementById("option2").addEventListener("click", gamedata.a82);
-        },
-        a82() {
-          text = "The road turns.";
-          buttontext1 = "Go West";
-          buttontext2 = "Go North";
-          gamedata.refresh();
-          document.getElementById("option1").addEventListener("click", gamedata.a8);
-          document.getElementById("option2").addEventListener("click", gamedata.a4);
-        },
-        a4() {
-          text = "To the East there is a beautiful park.";
-          buttontext1 = "Go South";
-          if (this.enteredPark != "true") {
-            buttontext2 = "Enter park";
-          } else {
-            buttontext2 = "Go back into park";
-          }
-          this.enteredPark = "true";
-          gamedata.refresh();
-          document.getElementById("option1").addEventListener("click", gamedata.a82);
-          document.getElementById("option2").addEventListener("click", gamedata.a61);
-        },
-        a61() {
-          text = "You enter a beautifully decorated park with lots of trees. There is a well in the center. There is a boy in the middle of the park, he looks like he's searching for something.";
-          buttontext1 = "Exit the Park";
-          buttontext2 = "Continue into the Park";
-          gamedata.refresh();
-          document.getElementById("option1").addEventListener("click", gamedata.a62);
-          document.getElementById("option2").addEventListener("click", gamedata.a63);
-        },
-        a62() {
-          text = "Exit through the North or South exit?";
-          buttontext1 = "North";
-          buttontext2 = "South";
-          gamedata.refresh();
-          document.getElementById("option1").addEventListener("click", gamedata.a42);
-          document.getElementById("option2").addEventListener("click", gamedata.a4);
-        },
-        a63() {
-          text = "What would you like to do in the park?";
-          buttontext1 = "Talk to the boy";
-          buttontext2 = "Investigate the well";
-          gamedata.refresh();
-          document.getElementById("option1").addEventListener("click", gamedata.a67);
-          document.getElementById("option2").addEventListener("click", gamedata.a64);
-        },
-        a64() {
-          text = "It's a deep well.";
-          buttontext1 = "Go in the well";
-          buttontext2 = "Exit the park";
-          gamedata.refresh();
-          document.getElementById("option1").addEventListener("click", gamedata.a65);
-          document.getElementById("option2").addEventListener("click", gamedata.a62);
-        },
-        a65() {
-          if (this.metElian != "true") {
-            text = "You lower yourself down into this well. It is wet. There is nothing down here.";
-            buttontext1 = "Bruh what are you doing down there go up already!";
-            gamedata.refresh();
-            document.getElementById("option1").addEventListener("click", gamedata.a63);
-          } else {
-            text = "You lower yourself down into this well. It is very wet. Out of the corner of your eye you see Elian's gem!";
-            buttontext1 = "Take gem";
-            gamedata.refresh();
-            document.getElementById("option1").addEventListener("click", gamedata.a66);
-            this.tookgem = "true";
-          }
-          buttontext2 = "Go up";
-          gamedata.refresh();
-          document.getElementById("option2").addEventListener("click", gamedata.a63);
-        },
-        a66() {
-          text = "Time to go up now.";
-          buttontext1 = "Go up";
-          buttontext2 = "Wait, then go up";
-          gamedata.refresh();
-          document.getElementById("option1").addEventListener("click", gamedata.a63);
-          document.getElementById("option2").addEventListener("click", gamedata.a63);
-        },
-        a67() {
-          text = `You walk up to the boy. Once he notices you he says "Have you seen my solar gem anywhere!" "Wait, you're not from around here. Anyway, my name's Elian, but you can call me Eli. If you see my solar gem please tell me."`;
-          buttontext1 = "Exit the Park";
-          buttontext2 = "Investigate the Well";
-          this.metElian = "true";
-          gamedata.refresh();
-          document.getElementById("option1").addEventListener("click", gamedata.a62);
-          document.getElementById("option2").addEventListener("click", gamedata.a64);
-        }
-      };
-      gamedata.beginning();
+    },
+    //
+    beginning() {
+      text = "You wake up in a strangely decorated house";
+      buttontext1 = "go outside.";
+      buttontext2 = "why am I here?";
+      gamedata.refresh();
+      document.getElementById("option1").addEventListener("click", gamedata.a8);
+      document
+        .getElementById("option2")
+        .addEventListener("click", gamedata.a52);
+    },
+    a8() {
+      text =
+        "As you exit the house you notice that you're in a village, one filled with generosity and light. To your right the road turns north-bound. To your left the road continues westward.";
+      buttontext1 = "Head Left";
+      buttontext2 = "Head Right";
+      gamedata.refresh();
+      document
+        .getElementById("option1")
+        .addEventListener("click", gamedata.a82);
+      document.getElementById("option2").addEventListener("click", gamedata.a7);
+    },
+    a52() {
+      text =
+        "You think long and hard about why you're here and you can't seem to find an answer. The last thing you remember was that you blacked out in the woods.";
+      buttontext1 = "go outside";
+      buttontext2 = "wait a bit";
+      gamedata.refresh();
+      document.getElementById("option1").addEventListener("click", gamedata.a8);
+      document
+        .getElementById("option2")
+        .addEventListener("click", gamedata.a53);
+    },
+    a53() {
+      text = `You wait in this house for a while until an old lady enters. She then says "Ah good, you're awake. I am Elder Vasra. I was just coming to check on you; our scouts found you in the forest all blacked out. You were just about to be consumed by the darkness! When you're feeling better come talk to me. To get to my house, first go right, then left. Got it?"`;
+      buttontext1 = "Got it";
+      buttontext2 = "The Darkness?";
+      this.metElderVasra = "true";
+      gamedata.refresh();
+      document
+        .getElementById("option1")
+        .addEventListener("click", gamedata.a55);
+      document
+        .getElementById("option2")
+        .addEventListener("click", gamedata.a54);
+    },
+    a54() {
+      text = `"The darkness?" you ask. "The darkness, you've never heard of it? It's been consuming our land for over 2 weeks now! I can't believe you've never heard of it!" Elder Vasra replies, then as quickly as she came, she's gone.`;
+      buttontext1 = "Go outside";
+      buttontext2 = "Try to follow her";
+      gamedata.refresh();
+      document.getElementById("option1").addEventListener("click", gamedata.a8);
+      document.getElementById("option2").addEventListener("click", gamedata.a8);
+    },
+    a55() {
+      text = `"Got it!" you reply. The Elder nods then exits quickly out the front door.`;
+      buttontext1 = "Go outside";
+      buttontext2 = "Try to follow her";
+      gamedata.refresh();
+      document.getElementById("option1").addEventListener("click", gamedata.a8);
+      document.getElementById("option2").addEventListener("click", gamedata.a8);
+    },
+    a7() {
+      if (this.metElderVasra != "true") {
+        text =
+          "The road continues to the west with houses lining the sides. Nearing the end you see a great big house.";
+      } else {
+        text =
+          "The road continues to the west with houses lining the sides. Nearing the end you see the house Elder Vasra was talking about.";
+      }
+      buttontext1 = "Enter House";
+      buttontext2 = "Go Back";
+      gamedata.refresh();
+      document.getElementById("option1").addEventListener("click", gamedata.a3);
+      document
+        .getElementById("option2")
+        .addEventListener("click", gamedata.a82);
+    },
+    a82() {
+      text = "The road turns.";
+      buttontext1 = "Go West";
+      buttontext2 = "Go North";
+      gamedata.refresh();
+      document.getElementById("option1").addEventListener("click", gamedata.a8);
+      document.getElementById("option2").addEventListener("click", gamedata.a4);
+    },
+    a4() {
+      text = "To the East there is a beautiful park.";
+      buttontext1 = "Go South";
+      if (this.enteredPark != "true") {
+        buttontext2 = "Enter park";
+      } else {
+        buttontext2 = "Go back into park";
+      }
+      this.enteredPark = "true";
+      gamedata.refresh();
+      document
+        .getElementById("option1")
+        .addEventListener("click", gamedata.a82);
+      document
+        .getElementById("option2")
+        .addEventListener("click", gamedata.a61);
+    },
+    a61() {
+      text =
+        "You enter a beautifully decorated park with lots of trees. There is a well in the center. There is a boy in the middle of the park, he looks like he's searching for something.";
+      buttontext1 = "Exit the Park";
+      buttontext2 = "Continue into the Park";
+      gamedata.refresh();
+      document
+        .getElementById("option1")
+        .addEventListener("click", gamedata.a62);
+      document
+        .getElementById("option2")
+        .addEventListener("click", gamedata.a63);
+    },
+    a62() {
+      text = "Exit through the North or South exit?";
+      buttontext1 = "North";
+      buttontext2 = "South";
+      gamedata.refresh();
+      document
+        .getElementById("option1")
+        .addEventListener("click", gamedata.a42);
+      document.getElementById("option2").addEventListener("click", gamedata.a4);
+    },
+    a63() {
+      text = "What would you like to do in the park?";
+      buttontext1 = "Talk to the boy";
+      buttontext2 = "Investigate the well";
+      gamedata.refresh();
+      document
+        .getElementById("option1")
+        .addEventListener("click", gamedata.a67);
+      document
+        .getElementById("option2")
+        .addEventListener("click", gamedata.a64);
+    },
+    a64() {
+      text = "It's a deep well.";
+      buttontext1 = "Go in the well";
+      buttontext2 = "Exit the park";
+      gamedata.refresh();
+      document
+        .getElementById("option1")
+        .addEventListener("click", gamedata.a65);
+      document
+        .getElementById("option2")
+        .addEventListener("click", gamedata.a62);
+    },
+    a65() {
+      if (this.metElian != "true") {
+        text =
+          "You lower yourself down into this well. It is wet. There is nothing down here.";
+        buttontext1 = "Bruh what are you doing down there go up already!";
+        gamedata.refresh();
+        document
+          .getElementById("option1")
+          .addEventListener("click", gamedata.a63);
+      } else {
+        text =
+          "You lower yourself down into this well. It is very wet. Out of the corner of your eye you see Elian's gem!";
+        buttontext1 = "Take gem";
+        gamedata.refresh();
+        document
+          .getElementById("option1")
+          .addEventListener("click", gamedata.a66);
+        this.tookgem = "true";
+      }
+      buttontext2 = "Go up";
+      gamedata.refresh();
+      document
+        .getElementById("option2")
+        .addEventListener("click", gamedata.a63);
+    },
+    a66() {
+      text = "Time to go up now.";
+      buttontext1 = "Go up";
+      buttontext2 = "Wait, then go up";
+      gamedata.refresh();
+      document
+        .getElementById("option1")
+        .addEventListener("click", gamedata.a63);
+      document
+        .getElementById("option2")
+        .addEventListener("click", gamedata.a63);
+    },
+    a67() {
+      text = `You walk up to the boy. Once he notices you he says "Have you seen my solar gem anywhere!" "Wait, you're not from around here. Anyway, my name's Elian, but you can call me Eli. If you see my solar gem please tell me."`;
+      buttontext1 = "Exit the Park";
+      buttontext2 = "Investigate the Well";
+      this.metElian = "true";
+      gamedata.refresh();
+      document
+        .getElementById("option1")
+        .addEventListener("click", gamedata.a62);
+      document
+        .getElementById("option2")
+        .addEventListener("click", gamedata.a64);
     }
+  };
+  gamedata.beginning();
+}
+
   </script>
 </body>
 </html>
